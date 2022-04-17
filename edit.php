@@ -2,18 +2,31 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-define('TITLE', 'Registrar vaga');
+define('TITLE', 'Editar vaga');
 
 use \App\Entity\Opportunity;
 
-$opportunity = new Opportunity();
+// VALIDAÇÃO DO GET
+if (!isset($_GET['id']) || !is_numeric($_GET['id']) ) {
+    header('location: index.php?status=error');
+    exit;
+}
+
+// CONSULTA VAGA
+$opportunity = Opportunity::getOpportunity($_GET['id']);
+
+// VALIDAÇÃO A VAGA
+if (!$opportunity instanceof Opportunity) {
+    header('location: index.php?status=error');
+    exit;
+}
 
 if (isset($_POST['title'], $_POST['description'], $_POST['active'])) {
     $opportunity->title       = $_POST['title'];
     $opportunity->description = $_POST['description'];
     $opportunity->active      = $_POST['active'];
 
-    $opportunity->register();
+    $opportunity->update();
 
     header('location: index.php?status=success');
     exit;

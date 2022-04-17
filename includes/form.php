@@ -9,19 +9,19 @@
         </a>
 
         <h2 class="mt-3">
-            Cadastrar Vaga
+            <?=TITLE?>
         </h2>
 
         <form method="POST">
 
             <div class="form-group">
                 <label>Título</label>
-                <input type="text" class="form-control" name="title">
+                <input type="text" class="form-control" name="title" value="<?= $opportunity->title ?>">
             </div>
 
             <div class="form-group">
                 <label>Descrição</label>
-                <textarea class="form-control" name="description" rows="5"></textarea>
+                <textarea class="form-control" name="description" rows="5"><?= $opportunity->description ?></textarea>
             </div>
 
             <div class="form-group">
@@ -36,7 +36,7 @@
 
                     <div class="form-check form-check-inline">
                         <label class="form-control">
-                            <input type="radio" name="active" value="0"> Inativo
+                            <input type="radio" name="active" value="0" <?= !$opportunity->active ? 'checked' : '' ?>> Inativo
                         </label>
                     </div>
                 </div>
