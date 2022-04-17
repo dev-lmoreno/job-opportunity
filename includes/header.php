@@ -8,13 +8,13 @@
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-        <title>LMor3nO - Job Opportunity</title>
+        <title>Job Opportunity System</title>
     </head>
     <body class="bg-dark text-light">
 
         <div class="container">
 
         <div class="jumbotron bg-danger">
-            <h1>LMor3nO Job Opportunity</h1>
+            <h1>Job Opportunity System</h1>
             <p>CRUD PHP POO</p>
         </div>
