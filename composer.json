@@ -1,0 +1,8 @@
+{
+    "name":"lmoreno/job-opportunity",
+    "autoload": {
+        "psr-4": {
+            "App\\":"app/"
+        }
+    }
+}
